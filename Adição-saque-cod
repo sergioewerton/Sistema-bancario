@@ -1,0 +1,20 @@
+# Estrutura de Adicição e Saque de um valor numa conta bancaria
+Codigos:
+
+opcao = int(input("Informe a opção \n [1] saque  \n [2]depositar"))
+
+saldo = 2000.0
+
+if opcao == 1 :
+    valor = float(input("Informe valor de saque : "))
+    if saldo >=valor:
+        print("saque realizado com sucesso!!")
+        print("valor restante:" ,saldo - valor)
+      
+    else:
+        print("saldo insuficiente !")
+
+elif opcao == 2:
+    saldo += int(input("Quanto quer depositar : "))
+    print("valor adicionado !")
+    print("valor total :" , saldo , int)
