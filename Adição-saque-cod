@@ -1,20 +1,52 @@
-# Estrutura de Adicição e Saque de um valor numa conta bancaria
-# Codigos:
 
-opcao = int(input("Informe a opção \n [1] saque  \n [2]depositar"))
-
-saldo = 2000.0
-
-if opcao == 1 :
-    valor = float(input("Informe valor de saque : "))
-    if saldo >=valor:
-        print("saque realizado com sucesso!!")
-        print("valor restante:" ,saldo - valor)
+print("""
+       ==========Menu============
       
-    else:
-        print("saldo insuficiente !")
+      1 - Depositar
+      2 - sacar 
+      0 - Sair
 
+        Obrigado por usar nosso banco!
+        """)
+
+
+saldo = 2500.00
+limite = 1000.00
+
+def menu():
+    while True:
+        try:
+            opcao = int(input("Escolha uma opção: "))
+            if opcao in [0, 1, 2]:
+                return opcao
+            else:
+                print("Opção inválida! Tente novamente.")
+        except ValueError:
+            print("Entrada inválida! Por favor, insira um número.")
+
+def depositar(saldo, valor):
+    if valor > 0:
+        saldo += valor
+        print(f"Depósito de R$ {valor:.2f} realizado com sucesso!")
+    else:
+        print("Valor inválido para depósito.")
+    return saldo
+
+
+opcao = menu()
+if opcao == 1:
+    valor = float(input("Digite o valor a ser depositado: "))
+    saldo = depositar(saldo, valor)
+    print(f"Seu novo saldo é: R$ {saldo:.2f}")
 elif opcao == 2:
-    saldo += int(input("Quanto quer depositar : "))
-    print("valor adicionado !")
-    print("valor total :" , saldo , int)
+    valor = float(input("Digite o valor a ser sacado: "))
+    if valor > saldo:
+        print("Saldo insuficiente!")
+    elif valor > limite:
+        print("Valor acima do limite de saque!")
+    else:
+        saldo -= valor
+        print(f"Saque de R$ {valor:.2f} realizado com sucesso!")
+        print(f"Seu novo saldo é: R$ {saldo:.2f}")
+elif opcao == 0:
+    print("Obrigado por usar nosso banco! Até logo!")
