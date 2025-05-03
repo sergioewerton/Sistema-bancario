@@ -1,6 +1,6 @@
 
 # Projeto com apenas codigos de Sistema bancario:
-![Brincadeira](image_2025-05-02_23-43-52)
+![Brincadeira](image_2025-05-02_23-43-52.jpng)
 
 Eu sou estudante de analise e desenvolvimento de sistemas.
 # Formação acadêmica 📚
