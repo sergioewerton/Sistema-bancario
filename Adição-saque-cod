@@ -1,4 +1,3 @@
-
 print("""
        ==========Menu============
       
@@ -12,8 +11,12 @@ print("""
 
 saldo = 2500.00
 limite = 1000.00
+extrato = ""
+limite_saque = 3
+saques_realizados = 0
 
-def menu():
+def menu(): # Função para exibir o menu e obter a opção do usuário
+    
     while True:
         try:
             opcao = int(input("Escolha uma opção: "))
@@ -24,7 +27,8 @@ def menu():
         except ValueError:
             print("Entrada inválida! Por favor, insira um número.")
 
-def depositar(saldo, valor):
+
+def depositar(saldo, valor): # Função para depositar um valor na conta
     if valor > 0:
         saldo += valor
         print(f"Depósito de R$ {valor:.2f} realizado com sucesso!")
@@ -33,12 +37,15 @@ def depositar(saldo, valor):
     return saldo
 
 
-opcao = menu()
-if opcao == 1:
+
+opcao = menu() # Chama a função menu para obter a opção do usuário
+
+if opcao == 1: # Se a opção for 1, chama a função depositar
     valor = float(input("Digite o valor a ser depositado: "))
     saldo = depositar(saldo, valor)
     print(f"Seu novo saldo é: R$ {saldo:.2f}")
-elif opcao == 2:
+
+elif opcao == 2: # Se a opção for 2, realiza o saque
     valor = float(input("Digite o valor a ser sacado: "))
     if valor > saldo:
         print("Saldo insuficiente!")
