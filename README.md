@@ -9,5 +9,5 @@
 - Cursando DIO Python Developer 
 
 # Tecnologias utilizada 🧰
-
-![python](https://img.shields.io/badge/python-4518857?style=for-the-badge&logo=python&logoColor=)
+- javascript (Node.js)
+- Lógica de programação
