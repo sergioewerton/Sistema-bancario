@@ -9,5 +9,5 @@
 - Cursando DIO Python Developer 
 
 # Tecnologias utilizada 🧰
-- javascript (Node.js)
-- Lógica de programação
+🟨javascript (Node.js) ;
+🟪Lógica de programação ;
